@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KCC New Media Arts - Framework</title>
+    <meta name="description" content="A simple HTML CSS and JS starter base">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <header class="site-header on-top-of-hero">
+        
+        <div class="logo">
+
+            <!-- INLINE SVG LOGO EXAMPLE -->
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                    <circle cx="250" cy="250" r="250" style="fill:#3b82f6"/>
+                </svg>
+                <span class="visually-hidden">KCC New Media Arts Logo</span>
+            </a>
+
+            <!-- INLINE IMG LOGO EXAMPLE -->
+             <!-- <a href="index.html"><img src="img/simplebase-logo-color.png" alt="Simple Base Logo" width="200" height="50"></a> -->
+
+            <h1 class="hide-visually"><a href="index.html">KCC New Media Arts</a></h1>
+
+        </div>
+
+        <nav class="site-nav" data-menustate="closed">
+            <button class="menubutton">
+                <span class="hide-visually">Menu</span>
+                <svg class="simple-navicon" width="24" height="21">
+                    <rect class="simple-navicon-top" x="0" y="2" height="3" width="30"></rect>
+                    <rect class="simple-navicon-middle" x="0" y="9" height="3" width="30"></rect>
+                    <rect class="simple-navicon-bottom" x="0" y="16" height="3" width="30"></rect>
+                </svg>
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="styleguide.html">Style Guide</a></li>
+            </ul>
+        </nav>
+
+
+
+    </header>
+
+    <main class="site-main">
+
+        <section class="hero text-centered">
+
+                <h1>Home Hero Headline</h1>
+                <h2>Subheader Goes Here</h2>
+                <p>This is the framework for my NMA website redesign project for ART 258.</p>
+                <a href="#features" class="button">See Features</a>
+            
+        </section>
+
+        <section id="features">
+            <div class="container">
+
+                <div class="row">
+                    <div class="one-half">
+                        <img src="img/placeholder-2000x1000.gif" alt="Placeholder image" width="2000" height="1000">
+                    </div>
+                    <div class="one-half">
+                        <h2>Image on the Left, Text on the Right</h2>
+                        <p>This column is rending via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fugit reprehenderit nobis eum modi ex.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+
+                <div class="row swapped">
+                    <div class="one-half">
+                        <img src="img/placeholder-2000x1000.gif" alt="Placeholder image" width="2000" height="1000">
+                    </div>
+                    <div class="one-half">
+                        <h2>Image on the Right, Text on the Left</h2>
+                        <p>This column is rending via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fugit reprehenderit nobis eum modi ex.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+
+                <div class="row">
+                    <div class="one-half centered">
+                        <img src="img/placeholder-2000x1000.gif" alt="Placeholder image" width="2000" height="1000">
+                        <h2>A Centered Column</h2>
+                        <p>This column is rending via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fugit reprehenderit nobis eum modi ex.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        
+        
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-6">
+                    <h2>About Simple Base</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident necessitatibus quod quae quasi officiis assumenda natus quis error, iste quo?</p>
+                </div>
+                <div class="col-3 push-9">
+                    <h2>Pages</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="styleguide.html">Style Guide</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+
+
+    <!-- MAIN JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

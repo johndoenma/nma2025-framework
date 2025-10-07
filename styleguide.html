@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KCC New Media Arts - Framework | Style Guide</title>
+    <meta name="description" content="A simple HTML CSS and JS starter base">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <header class="site-header">
+        
+        <div class="logo">
+
+            <!-- INLINE SVG LOGO EXAMPLE -->
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                    <circle cx="250" cy="250" r="250" style="fill:#3b82f6"/>
+                </svg>
+                <span class="visually-hidden">KCC New Media Arts Logo</span>
+            </a>
+
+            <!-- INLINE IMG LOGO EXAMPLE -->
+             <!-- <a href="index.html"><img src="img/simplebase-logo-color.png" alt="Simple Base Logo" width="200" height="50"></a> -->
+
+            <h1 class="hide-visually"><a href="index.html">KCC New MEdia Arts</a></h1>
+
+        </div>
+
+        <nav class="site-nav" data-menustate="closed">
+            <button class="menubutton">
+                <span class="hide-visually">Menu</span>
+                <svg class="simple-navicon" width="24" height="21">
+                    <rect class="simple-navicon-top" x="0" y="2" height="3" width="30"></rect>
+                    <rect class="simple-navicon-middle" x="0" y="9" height="3" width="30"></rect>
+                    <rect class="simple-navicon-bottom" x="0" y="16" height="3" width="30"></rect>
+                </svg>
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="styleguide.html">Style Guide</a></li>
+            </ul>
+        </nav>
+
+
+
+    </header>
+
+    <main class="site-main">
+
+        <section class="hero">
+            <div class="container">
+
+                <h1>Style Guide</h1>
+            
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+
+
+                <!-- 2 COLUMN PAGE LAYOUT ASIDE + MAIN CONTENT -->
+
+                <div class="pagelayout-wrapper-twocolumn">
+
+                    <div class="pagesection-aside">
+
+                        <div class="stickybox">
+
+                            <h2>Table of Contents</h2>
+                            <nav>
+                                <ul>
+                                    <li><a href="#boilerplate">Boilerplate</a></li>
+                                    <li><a href="#css-variables">CSS Variables</a></li>
+                                    <li><a href="#typography">Typography</a></li>
+                                    <li><a href="#buttons">Buttons</a></li>
+                                    <li><a href="#media">Media</a></li>
+                                    <li><a href="#helper-classes">Helper Classes</a></li>
+                                    <li><a href="#grid-system">Grid System</a></li>
+                                    <li><a href="#typeblock">Type Block</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+
+                    <div class="pagesection-maincontent">
+
+                        <h2 id="boilerplate">Boilerplate</h2>
+                        <p>This is a paragraph width default body type. I usually place a paragraph of text in my boilerplates (both in code and in Figma) in order to make sure that the default text size is correct (16px = 1em). Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos error nobis molestias est impedit, eaque provident ex quas cum blanditiis ea ad sunt natus tempore esse nihil deleniti adipisci facere recusandae ut! Deserunt nostrum similique enim veritatis, possimus soluta odit doloremque facere esse eum, rem nisi natus iste earum cupiditate!</p>
+
+                        <h3>Simple Base Site Folder Structure</h3>
+
+                        <pre><code>
+sitename/
+├── index.html
+├── css/
+│   ├── style.css
+├── js/
+│   ├── script.js
+├── img/
+│   ├── (images go here)                 
+                    </code></pre>
+
+
+                        <hr>
+
+
+                        <h2 id="css-variables">CSS Variables</h2>
+
+                        <h3>Colors</h3>
+
+                        <h4>Primary Blues (eg Brand color)</h4>
+
+                        <div class="card">
+                            <div class="color-swatch" style="--_swatch-color: #dbeafe;"></div>
+                            <div class="color-info">
+                                <p>Light Blue<br>
+                                --color-blue-100<br>
+                                #dbeafe
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="color-swatch" style="--_swatch-color: #3b82f6;"></div>
+                            <div class="color-info">
+                                <p>Blue<br>
+                                --color-blue-400<br>
+                                #3b82f6
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="color-swatch" style="--_swatch-color: #1e40af;"></div>
+                            <div class="color-info">
+                                <p>Dark Blue<br>
+                                --color-blue-900<br>
+                                #1e40af
+                                </p>
+                            </div>
+                        </div>
+
+                        <h4>Secondary (aka "Accent") color</h4>
+
+                        <div class="card">
+                            <div class="color-swatch" style="--_swatch-color: #22c55e;"></div>
+                            <div class="color-info">
+                                <p>Green<br>
+                                --color-green-400<br>
+                                #22c55e
+                                </p>
+                            </div>
+                        </div>
+
+                        <pre><code>
+:root {
+
+    /* DEFINE BASE COLORS */
+    --color-blue-100: #dbeafe;
+    --color-blue-400: #3b82f6;
+    --color-blue-900: #1e40af;
+
+    /* DEFINE SEMANTIC COLORS */
+    --color-primary: var(--color-blue-400);
+    --color-primary-dark: var(--color-blue-900);
+
+}
+                        </code></pre>
+
+
+
+                        <hr>
+
+
+                        <h2 id="typography">Typography</h2>
+
+                        <h1>This is a Heading 1</h1>
+                        <h2>This is a Heading 2</h2>
+                        <h3>This is a Heading 3</h3>
+
+                        <p>This is a paragraph. This is <em>italic text</em>, this is <strong>bold text</strong>, and this is an <a href="#">inline link with some styling</a>. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem deleniti ducimus eligendi corporis dolorem corrupti reiciendis quibusdam ipsam neque optio!</p>
+
+                        <pre><code>
+&lt;h1&gt;This is a Heading 1&lt;/h1&gt;
+&lt;h2&gt;This is a Heading 2&lt;/h2&gt;
+&lt;h3&gt;This is a Heading 3&lt;/h3&gt;
+
+&lt;p&gt;This is a paragraph. This is &lt;em&gt;italic text&lt;/em&gt;, this is &lt;strong&gt;bold text&lt;/strong&gt;, and this is an &lt;a href="#"&gt;inline link with some styling</a>. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem deleniti ducimus eligendi corporis dolorem corrupti reiciendis quibusdam ipsam neque optio!&lt;/p&gt;
+                        </code></pre>
+
+
+                        <hr>
+
+                        <h2 id="buttons">Buttons</h2>
+
+                        <a href="#" class="button">Default button</a>
+
+                        <pre><code>
+&lt;a href="#" class="button"&gt;Default button&lt;/a&gt;                            
+                        </code></pre>
+
+                        <hr>
+
+
+                        <h2 id="media">Media</h2>
+                        <h3>Responsive Images</h3>
+
+                        <img src="img/placeholder-2000x1000.gif" width="2000" height="1000" alt="Placeholder image">
+
+                        <hr>
+
+                        <h2 id="helper-classes">Helper Classes</h2>
+
+                        <h3><code>class="text-centered"</code></h3>
+
+                        <p class="text-centered">I want this text to be centered.</p>
+
+                        <pre><code>
+&lt;p class="text-centered"&gt;I want this text to be centered.&lt;/p&gt;
+                        </code></pre>
+
+                        <hr>
+
+                        <h2 id="grid-system">Grid System (12 column)</h2>
+
+
+                    <pre><code>
+&lt;div class="row"&gt;
+    &lt;div class="one-half"&gt;&frac12;&lt;/div&gt;
+    &lt;div class="one-half"&gt;&frac12;&lt;/div&gt;
+&lt;/div&gt;
+                        </code></pre>
+
+                        <div class="row demo">
+                            <div class="one-whole">1</div>
+                        </div>
+
+                        <div class="row demo">
+                            <div class="one-half">&frac12;</div>
+                            <div class="one-half">&frac12;</div>
+                        </div>
+
+                        <div class="row demo">
+                            <div class="one-third">&frac13;</div>
+                            <div class="one-third">&frac13;</div>
+                            <div class="one-third">&frac13;</div>  
+                        </div>
+
+                        <div class="row demo">
+                            <div class="one-third">&frac13;</div>
+                            <div class="two-thirds">&frac23;</div>
+                        </div>
+
+                        <div class="row demo">
+                            <div class="one-fourth">&frac14;</div>
+                            <div class="one-fourth">&frac14;</div>
+                            <div class="one-fourth">&frac14;</div>
+                            <div class="one-fourth">&frac14;</div>
+                        </div>
+
+                        <div class="row demo">
+                            <div class="one-fourth">&frac14;</div>
+                            <div class="three-fourths">&frac34;</div>
+                        </div>
+
+                        <div class="row demo">
+                            <div class="one-half centered">&frac12; .centered</div>
+                        </div>
+
+                        <div class="row demo">
+                            <div class="two-thirds centered">&frac23; .centered</div>
+                        </div>
+
+                        <div class="row demo">
+                            <div class="col-1">.col-1</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-2">.col-2</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-3">.col-3</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-4">.col-4</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-5">.col-5</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-6">.col-6</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-7">.col-7</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-8">.col-8</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-9">.col-9</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-10">.col-10</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-11">.col-11</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-12">.col-12</div>
+                        </div>
+
+                        <div class="row demo">
+                            <div class="col-11 push-1">.push-1</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-10 push-2">.push-2</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-9 push-3">.push-3</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-8 push-4">.push-4</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-7 push-5">.push-5</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-6 push-6">.push-6</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-5 push-7">.push-7</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-4 push-8">.push-8</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-3 push-9">.push-9</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-2 push-10">.push-10</div>
+                        </div>
+                        <div class="row demo">
+                            <div class="col-1 push-11">.push-11</div>
+                        </div>
+
+                        
+
+                    <pre><code>
+&lt;div class="row"&gt;
+    &lt;div class="one-half"&gt; ... &lt;/div&gt;
+    &lt;div class="one-half"&gt; ... &lt;/div&gt;
+&lt;/div&gt;
+                        </code></pre>
+
+                        <div class="row">
+                            <div class="one-half">
+                                <img src="img/placeholder-2000x1000.gif" alt="Placeholder image" width="2000" height="1000">
+                            </div>
+                            <div class="one-half">
+                                <h2>Image on the Left, Text on the Right</h2>
+                                <p>This column is rending via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fugit reprehenderit nobis eum modi ex.</p>
+                            </div>
+                        </div>
+
+                        <pre><code>
+&lt;div class="row swapped"&gt;
+    &lt;div class="one-half"&gt; ... &lt;/div&gt;
+    &lt;div class="one-half"&gt; ... &lt;/div&gt;
+&lt;/div&gt;
+                        </code></pre>
+
+                        <div class="row swapped">
+                            <div class="one-half">
+                                <img src="img/placeholder-2000x1000.gif" alt="Placeholder image" width="2000" height="1000">
+                            </div>
+                            <div class="one-half">
+                                <h2>Image on the Right, Text on the Left</h2>
+                                <p>This column is rending via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fugit reprehenderit nobis eum modi ex.</p>
+                            </div>
+                        </div>
+
+
+
+                        <pre><code>
+&lt;div class="row"&gt;
+    &lt;div class="one-half centered"&gt; ... &lt;/div&gt;
+&lt;/div&gt;
+                        </code></pre>
+
+
+                        <div class="row">
+                            <div class="one-half centered">
+                                <img src="img/placeholder-2000x1000.gif" alt="Placeholder image" width="2000" height="1000">
+                                <h2>A Centered Column</h2>
+                                <p>This column is rending via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fugit reprehenderit nobis eum modi ex.</p>
+                            </div>
+                        </div>
+
+
+
+                    <pre><code>
+&lt;div class="row"&gt;
+    &lt;div class="col-5 push-1"&gt; ... &lt;/div&gt;
+    &lt;div class="col-5"&gt; ... &lt;/div&gt;
+&lt;/div&gt;
+                        </code></pre>
+
+                        <div class="row">
+                            <div class="col-5 push-1">
+                                <img src="img/placeholder-2000x1000.gif" alt="Placeholder image" width="2000" height="1000">
+                                <h2>Col-5 Column with a Push-1</h2>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident necessitatibus quod quae quasi officiis assumenda natus quis error, iste quo?</p>
+                            </div>
+                            <div class="col-5">
+                                <img src="img/placeholder-2000x1000.gif" alt="Placeholder image" width="2000" height="1000">
+                                <h2>Col-5 Column</h2>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident necessitatibus quod quae quasi officiis assumenda natus quis error, iste quo?</p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <h2 id="typeblock">NMA Type Block</h2>
+
+                        <div class="nma-eyebrow">NMA Eyebrow</div>
+                        <h3 class="nma-headline">NMA Custom Headline</h3>
+                        <h4 class="nma-subheadline">NMA Custom SubHeadline</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur fugiat adipisci placeat aspernatur omnis debitis? Libero dicta est ratione?</p>
+
+                        <pre><code>
+&lt;div class="nma-eyebrow"&gt;NMA Eyebrow&lt;/div&gt;
+&lt;h3 class="nma-headline"&gt;NMA Custom Headline&lt;/h3&gt;
+&lt;h4 class="nma-subheadline"&gt;NMA Custom SubHeadline&lt;/h4&gt;
+                        </code></pre>
+
+
+
+                        <hr>
+                        
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-6">
+                    <h2>About Simple Base</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident necessitatibus quod quae quasi officiis assumenda natus quis error, iste quo?</p>
+                </div>
+                <div class="col-3 push-9">
+                    <h2>Pages</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="styleguide.html">Style Guide</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+
+
+    <!-- MAIN JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
