@@ -622,6 +622,7 @@ body > * {
     font-weight: bold;
     text-transform: uppercase;
     opacity: .5;
+    line-height: 1;
 }
 
 .nma-headline {
@@ -636,4 +637,5 @@ body > * {
     font-style: italic;
     margin-block: var(--unit-xs);
     opacity: .7;
+    line-height: 1.2;
 }
