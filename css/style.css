@@ -39,6 +39,8 @@ TABLE OF CONTENTS
     # STICKYBOX
     # NMA TYPE BLOCK
 
+# ANIMATIONS
+
 ----------------------- */
 
 /* ------------------
@@ -639,3 +641,56 @@ body > * {
     opacity: .7;
     line-height: 1.2;
 }
+
+
+/* ------------------
+        ANIMATIONS 
+--------------------- */
+.slide-from-top-and-fade-in {
+    animation-name: slide-from-top-and-fade-in;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0,.5,.5,1);
+    animation-fill-mode: forwards;
+    opacity: 0;
+    translate: 0 -40px;
+}
+
+@keyframes slide-from-top-and-fade-in {
+    0% {
+        opacity: 0;
+        translate: 0 -40px;
+    }
+    100% {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+
+.slide-from-left-and-fade-in {
+    animation-name: slide-from-left-and-fade-in;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0,1,0,1);
+    animation-fill-mode: forwards;
+    opacity: 0;
+    translate: -20px 0;
+}
+
+@keyframes slide-from-left-and-fade-in {
+    0% {
+        opacity: 0;
+        translate: -20px 0;
+    }
+    100% {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+.delay-0 { animation-delay: 0s; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.5s; }
+.delay-5 { animation-delay: 0.7s; }
+.delay-6 { animation-delay: 0.9s; }
