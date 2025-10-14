@@ -18,5 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
         sitenav.removeAttribute("data-menustate");
     };
 
+
+    // SCROLL-TRIGGERED ANIMATION
+
+
 });
 

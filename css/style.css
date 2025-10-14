@@ -40,6 +40,8 @@ TABLE OF CONTENTS
     # NMA TYPE BLOCK
 
 # ANIMATIONS
+    # REGULAR ON PAGE LOAD ANIMATIONS
+    # SCROLL-TRIGGERED ANIMATIONS
 
 ----------------------- */
 
@@ -646,6 +648,9 @@ body > * {
 /* ------------------
         ANIMATIONS 
 --------------------- */
+
+/* REGULAR ON PAGE LOAD ANIMATIONS */
+
 .slide-from-top-and-fade-in {
     animation-name: slide-from-top-and-fade-in;
     animation-duration: 1s;
@@ -694,3 +699,7 @@ body > * {
 .delay-4 { animation-delay: 0.5s; }
 .delay-5 { animation-delay: 0.7s; }
 .delay-6 { animation-delay: 0.9s; }
+
+
+/* SCROLL-TRIGGERED ANIMATION */
+
