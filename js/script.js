@@ -18,8 +18,23 @@ document.addEventListener("DOMContentLoaded", () => {
         sitenav.removeAttribute("data-menustate");
     };
 
-
     // SCROLL-TRIGGERED ANIMATION
+    // CHANGE ACTIVE STATE FOR ALL TARGET ELEMENTS WITH INTERSECTION OBSERVER
+    const myobserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+            entry.target.setAttribute("data-viewstate", "active");
+            } else {
+            entry.target.setAttribute("data-viewstate", "inactive");
+            };   
+        });  
+    });
+
+    const mytargets = document.querySelectorAll('.observe-me');
+    mytargets.forEach((el) => {
+        myobserver.observe(el);
+    });
+
 
 
 });
