@@ -8,6 +8,9 @@
     <title>KCC New Media Arts - Framework | Style Guide</title>
     <meta name="description" content="A simple HTML CSS and JS starter base">
 
+    <!-- SWIPER CSS - put at the top inside of your head -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -119,9 +122,124 @@ sitename/
 
                         <h3>Colors</h3>
 
-                        <h4>Primary Blues (eg Brand color)</h4>
+                        <!-- <h4>Primary Blues (eg Brand color)</h4> -->
 
-                        <div class="card">
+                        <!-- Slider main container -->
+                        <div class="swiper">
+
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                
+                                    <div class="card">
+                                        <div class="color-swatch" style="--_swatch-color: #dbeafe;"></div>
+                                        <div class="color-info">
+                                            <p>Light Blue<br>
+                                            --color-blue-100<br>
+                                            #dbeafe
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="color-swatch" style="--_swatch-color: #3b82f6;"></div>
+                                        <div class="color-info">
+                                            <p>Blue<br>
+                                            --color-blue-400<br>
+                                            #3b82f6
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="color-swatch" style="--_swatch-color: #1e40af;"></div>
+                                        <div class="color-info">
+                                            <p>Dark Blue<br>
+                                            --color-blue-900<br>
+                                            #1e40af
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="color-swatch" style="--_swatch-color: #22c55e;"></div>
+                                        <div class="color-info">
+                                            <p>Green<br>
+                                            --color-green-400<br>
+                                            #22c55e
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                
+                                    <div class="card">
+                                        <div class="color-swatch" style="--_swatch-color: #dbeafe;"></div>
+                                        <div class="color-info">
+                                            <p>Light Blue<br>
+                                            --color-blue-100<br>
+                                            #dbeafe
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="color-swatch" style="--_swatch-color: #3b82f6;"></div>
+                                        <div class="color-info">
+                                            <p>Blue<br>
+                                            --color-blue-400<br>
+                                            #3b82f6
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="color-swatch" style="--_swatch-color: #1e40af;"></div>
+                                        <div class="color-info">
+                                            <p>Dark Blue<br>
+                                            --color-blue-900<br>
+                                            #1e40af
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="color-swatch" style="--_swatch-color: #22c55e;"></div>
+                                        <div class="color-info">
+                                            <p>Green<br>
+                                            --color-green-400<br>
+                                            #22c55e
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                        </div>
+
+                        <!-- <div class="card">
                             <div class="color-swatch" style="--_swatch-color: #dbeafe;"></div>
                             <div class="color-info">
                                 <p>Light Blue<br>
@@ -161,7 +279,7 @@ sitename/
                                 #22c55e
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
 
                         <pre><code>
 :root {
@@ -481,6 +599,29 @@ sitename/
         </div>
     </footer>
 
+    <!-- SWIPER JS - put at the bottom inside of your body -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 0,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        });
+    </script>
 
     <!-- MAIN JS -->
     <script src="js/script.js"></script>
