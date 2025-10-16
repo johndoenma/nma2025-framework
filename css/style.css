@@ -28,6 +28,7 @@ TABLE OF CONTENTS
     # CARDS
     # HR (HORIZONTAL RULE)
     # CODE BLOCKS
+    # SWIPER SLIDER (CAROUSEL)
 
     (WE WILL ADD MORE HERE)
 
@@ -549,6 +550,32 @@ pre:has(code) {
     white-space: pre-wrap;
 }
 
+/* SWIPER CSS STYLING */
+
+.swiper {
+    padding-block-end: 2rem;
+    /* margin-inline: 4rem; */
+    text-align: center;
+}
+
+.swiper-wrapper {
+}
+
+/* MOVE SWIPER ARROWS OUTSIDE OF SWIPER */
+.swiper-button-prev, 
+.swiper-button-next {
+    background-color: var(--color-white);
+    padding: var(--unit-xs);
+    border-radius: 100%;
+}
+
+.swiper-button-prev {
+    /* translate: -50% 0 */
+}
+
+.swiper-button-next {  
+    /* translate: 50% 0; */
+}
 
 /* ------------------
     CUSTOM SITE STYLING 
